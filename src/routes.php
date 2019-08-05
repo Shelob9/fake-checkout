@@ -9,7 +9,8 @@ return function (App $app) {
     	if( ! filter_var($url, FILTER_VALIDATE_URL)) {
     		throw new Exception( 'Not valid redirect URL' );
 		}
-    	$url = $url . '&token=123456';
+    	$token = is_string( $request->getQueryParam('token')) ?  $request->getQueryParam('token') : '12345';
+    	$url = $url . '&token=' . $token;
     	$response->write( sprintf('<a href="%s">%s</a>', $url, 'Return to '. $url) );
     });
 };
