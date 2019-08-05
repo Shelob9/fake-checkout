@@ -11,7 +11,7 @@ This is a simple app designed to simulate checkout via a service, for example St
 ### Steps
 
 * Install
-    * `git clone ...`
+    * `git clone https://github.com/Shelob9/fake-checkout`
     * `cd fake-checkout && composer install`
 * Start server
     * `composer start`
